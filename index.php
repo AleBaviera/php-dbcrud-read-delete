@@ -19,9 +19,9 @@
     <script id="item-template" type="text/x-handlebars-template">
       <div class="pagamento" data-id={{id}}>
 
-        <p>Prenotazione n. {{prenotazione_id}} Prezzo: {{price}} Codice pagante: {{pagante_id}}
+        Prenotazione n. {{prenotazione_id}} Prezzo: {{price}} Codice pagante: {{pagante_id}}
         <button type="button" name="button">CANCELLA PAGAMENTO</button>
-        </p>
+
       </div>
 
     </script>
@@ -37,14 +37,17 @@
   </head>
   <body>
     <div class="container">
+      <h2>ACCEPTED</p>
       <div class="accepted">
-        <h2>ACCEPTED</p>
+
       </div>
+      <h2>PENDING</p>
       <div class="pending">
-        <h2>PENDING</p>
+
       </div>
+      <h2>REJECTED</p>
       <div class="rejected">
-        <h2>REJECTED</p>
+
       </div>
 
 

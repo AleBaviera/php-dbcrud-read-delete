@@ -1,8 +1,12 @@
 function init(){
   getDataPagamenti();
+  $(document).on('click', 'button', deletePayment);
 }
-
+function resetPage(){
+   $('.container div').html('');
+}
 function getDataPagamenti(){
+  resetPage();
   $.ajax({
     url: 'api.php',
     method: 'GET',
@@ -42,5 +46,22 @@ function printPayments(data){
   }
 
 }
+function deletePayment(data){
+  var btnP = $(this);
+  var delP = btnP.parent();
+  var idP = delP.data('id');
+  console.log(idP);
 
+  $.ajax({
+    url: 'api-delete-payment.php',
+    method: 'GET',
+    data:{
+      id: idP
+    },
+    success: function(data){
+      getDataPagamenti();
+    },
+    error: function(){}
+  });
+}
 $(document).ready(init);
