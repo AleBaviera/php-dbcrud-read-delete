@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  font-family: 'Lato', sans-serif;
+
+  user-select: none;
+  list-style: none;
+}
+
+.container {
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 50px 25px;
+
+  /* overflow: hidden; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+}
+.pagamento{
+  background-color: purple;
+  color: white;
+
+  margin: 10px;
+  padding: 5px;
+}
